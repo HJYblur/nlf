@@ -107,7 +107,7 @@ class MultipersonNLF(torch.nn.Module):
     ):
         images = im_to_linear(images)
 
-        boxes = self.(
+        boxes = self.detector(
             images=images,
             threshold=detector_threshold,
             nms_iou_threshold=detector_nms_iou_threshold,
